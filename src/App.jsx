@@ -1,16 +1,18 @@
+import { Outlet } from "react-router";
+import Navbar from "./Components/Navbar";
+import Footer from "./Components/Footer";
 
-import './App.css'
 
-function App() {
-
+const App = () => {
   return (
-    <>
-      
-      <h1 className=''>Vite + React</h1>
-      
-     
-    </>
-  )
-}
+    <div className="font-sans">
+      <Navbar />
+      <div className="min-h-[80vh] container mx-auto px-4">
+        <Outlet />
+      </div>
+      <Footer />
+    </div>
+  );
+};
 
-export default App
+export default App;
